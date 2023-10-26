@@ -1,0 +1,32 @@
+module.exports = {
+  CONFIG: {
+    app_id: 16929,
+    user_token: "",
+    proposal_request: {
+      proposal: 1,
+      subscribe: 1,
+      amount: 2,
+      basis: "payout",
+      contract_type: "CALL",
+      currency: "USD",
+      duration: 15,
+      duration_unit: "m",
+      symbol: "R_100",
+      barrier: "+0.1",
+    },
+    contract_request: (number) => ({
+      proposal: 1,
+      amount: 2,
+      barrier: Number(number),
+      basis: "stake",
+      contract_type: "DIGITDIFF",
+      currency: "USD",
+      duration: 1,
+      duration_unit: "t",
+      product_type: "basic",
+      req_id: 14,
+      subscribe: 1,
+      symbol: "R_100",
+    }),
+  },
+};
